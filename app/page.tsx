@@ -1,12 +1,24 @@
-import { Button } from "@/components/ui/button"
+import { Birthdays, GrainyBackground } from "@/components/custom"
+import { GridPattern } from "@/components/magicui/grid-pattern"
 
 const Home = () => {
     return (
-        <div>
-            <Button>Hello there</Button>
+        <main className="h-dvh w-full">
+            <GrainyBackground />
 
-            <p className="font-black text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptas minima hic eius sed incidunt impedit! Quisquam explicabo, blanditiis aliquid deleniti voluptates reiciendis similique voluptatum. Facere ducimus veritatis dolores tempore?</p>
-        </div>
+            <GridPattern 
+                width={60}
+                height={60}
+                x={-1}
+                y={-1}
+                strokeDasharray={"1 1"}
+                className="z-20"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/0 to-background z-30" />
+
+            <Birthdays />
+        </main>
     )
 }
 
